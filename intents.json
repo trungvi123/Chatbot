@@ -42,6 +42,13 @@
       ],
       "context": ""
     },
+    {
+      "tag": "website",
+      "patterns": ["Website này là gì?", "Hãy giới thiệu về website?", "Tác dụng của website", "tại sao tôi phải sử dụng website này?"],
+      "responses": [
+        "Trong bối cảnh thời đại hiện nay, với sự phát triển nhanh chóng và nhu cầu ngày càng cao về sự tiện lợi, ý tưởng xây dựng 'Website đấu giá và chia sẻ đồ dùng cá nhân' xuất phát từ nỗ lực đáp ứng nhu cầu đa dạng của cộng đồng. Việc kết hợp đấu giá trực tuyến và chia sẻ đồ dùng cá nhân không chỉ giúp tối ưu hóa thời gian và chi phí mà còn đóng góp tích cực vào việc bảo vệ môi trường thông qua việc giảm lượng rác thải."
+      ]
+    },
 
     {
       "tag": "Thời gian kết thúc",
@@ -101,7 +108,7 @@
       "tag": "Email paypal",
       "patterns": [
         "paypal Email là gì",
-        " Hãy chỉ tôi cách đăng ký Paypal email",
+        "Hãy chỉ tôi cách đăng ký Paypal email",
         "Tôi muốn đăng ký tài khoản Paypal thì làm thế nào"
       ],
       "responses": [
@@ -119,7 +126,7 @@
         "Báo cho tôi khi kết thúc"
       ],
       "responses": [
-        "Bạn có thể tạo thông báo để nhận thông tin về kết thúc đấu giá. Hãy kiểm tra cài đặt tài khoản của bạn."
+        "Bạn có thể nhận thông báo từ các cuộc đấu giá, hãy vào cuộc đấu giá đó và bấm vào biểu tượng cái chuông!"
       ],
       "context": ""
     },
@@ -145,7 +152,7 @@
         "Danh sách đấu giá"
       ],
       "responses": [
-        "Bạn có thể xem lịch sử đấu giá trong tài khoản của bạn. Hãy truy cập mục Lịch sử để kiểm tra."
+        "Bạn có thể xem lịch sử đấu giá trong tài khoản của bạn. Hãy vào quản lí đấu giá để kiểm tra."
       ],
       "context": ""
     },
@@ -171,7 +178,7 @@
         "Phí tham gia"
       ],
       "responses": [
-        "Phí đấu giá thường được tính dựa trên giá trị đấu giá của sản phẩm. Thông tin chi tiết về phí đấu giá có thể thấy trên trang sản phẩm."
+        "Phí đấu giá thường được tính dựa trên giá trị đấu giá của sản phẩm."
       ],
       "context": ""
     },

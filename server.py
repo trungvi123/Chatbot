@@ -19,15 +19,15 @@ classes = pickle.load(open('classes.pkl', 'rb'))
 intents = json.loads(open('intents.json', encoding="utf8").read())
 
 
-def clean_up_sentence(sentence):
-    sentence_words = nltk.word_tokenize(sentence)
+def clean_up_sentence(user_message):
+    sentence_words = nltk.word_tokenize(user_message)
     sentence_words = [lemmatizer.lemmatize(
         word.lower()) for word in sentence_words]
     return sentence_words
 
 
-def bow(sentence, words):
-    sentence_words = clean_up_sentence(sentence)
+def bow(user_message, words):
+    sentence_words = clean_up_sentence(user_message)
     bag = [0] * len(words)
     for s in sentence_words:
         for i, w in enumerate(words):
@@ -36,8 +36,8 @@ def bow(sentence, words):
     return np.array(bag)
 
 
-def predict_class(sentence, model):
-    p = bow(sentence, words)
+def predict_class(user_message, model):
+    p = bow(user_message, words)
     res = model.predict(np.array([p]))[0]
     ERROR_THRESHOLD = 0.25
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
@@ -60,7 +60,6 @@ def get_response(intents_json, ints):
 
 @app.route('/api/chatbot', methods=['POST'])
 def chatbot():
-
     data = request.get_json()
     user_message = data['message']
     ints = predict_class(user_message, model)
